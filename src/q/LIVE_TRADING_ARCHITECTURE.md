@@ -27,36 +27,36 @@ This document describes the kdb+/q components for real-time trading that are **n
                                       ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                            FEEDHANDLER (Python)                             │
-│  - Connects to data sources (Alpaca, IBKR, etc.)                           │
+│  - Connects to data sources (Alpaca, IBKR, etc.)                            │
 │  - Normalizes data to standard format                                       │
-│  - Publishes to Ticker Plant via IPC                                       │
+│  - Publishes to Ticker Plant via IPC                                        │
 └─────────────────────────────────────────────────────────────────────────────┘
                                       │
                                       ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                        TICKER PLANT (kdb+/q - port 5010)                   │
+│                        TICKER PLANT (kdb+/q - port 5010)                    │
 │  tick/tick.q                                                                │
 │  - Receives all market data                                                 │
-│  - Logs to disk for recovery                                               │
+│  - Logs to disk for recovery                                                │
 │  - Publishes to subscribers (RDB, strategy processes)                       │
 └─────────────────────────────────────────────────────────────────────────────┘
                           │                           │
                           ▼                           ▼
-┌─────────────────────────────────┐   ┌─────────────────────────────────────┐
-│   RDB (Real-time DB - port 5011) │   │  STRATEGY ENGINE (Python + PyKX)    │
-│   tick/r.q                       │   │  - Subscribes to TP                  │
-│   - In-memory current day data   │   │  - Calculates indicators             │
-│   - Fast queries for analytics   │   │  - Generates signals                 │
-│   - End-of-day saves to HDB      │   │  - Sends orders to execution         │
-└─────────────────────────────────┘   └─────────────────────────────────────┘
-              │                                        │
-              ▼                                        ▼
-┌─────────────────────────────────┐   ┌─────────────────────────────────────┐
-│   HDB (Historical DB - port 5012)│   │  EXECUTION ENGINE                    │
-│   - Partitioned by date          │   │  - Order management                  │
-│   - Years of tick data           │   │  - Risk checks                       │
-│   - Analytics queries            │   │  - Broker API integration            │
-└─────────────────────────────────┘   └─────────────────────────────────────┘
+┌─────────────────────────────────---┐   ┌────────────────────────────────────┐
+│   RDB (Real-time DB - port 5011)   │   │  STRATEGY ENGINE (Python + PyKX)   │
+│   tick/r.q                         │   │  - Subscribes to TP                │
+│   - In-memory current day data     │   │  - Calculates indicators           │
+│   - Fast queries for analytics     │   │  - Generates signals               │
+│   - End-of-day saves to HDB        │   │  - Sends orders to execution       │
+└─────────────────────────────────---┘   └────────────────────────────────────┘
+              │                                          │
+              ▼                                          ▼
+┌─────────────────────────────────---┐   ┌─────────────────────────────────────┐
+│   HDB (Historical DB - port 5012)  │   │  EXECUTION ENGINE                   │
+│   - Partitioned by date            │   │  - Order management                 │
+│   - Years of tick data             │   │  - Risk checks                      │
+│   - Analytics queries              │   │  - Broker API integration           │
+└─────────────────────────────────---┘   └─────────────────────────────────────┘
 ```
 
 ---
