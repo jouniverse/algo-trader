@@ -1,0 +1,91 @@
+# Algo-Trader Configuration
+# ==========================
+
+# Application settings
+app:
+  name: "Algo-Trader"
+  version: "0.1.0"
+  debug: true
+  log_level: "INFO"
+
+# API Server
+server:
+  host: "0.0.0.0"
+  port: 8000
+  cors_origins:
+    - "*"
+
+# kdb+ / q settings
+kdb:
+  # Ticker Plant
+  tickerplant:
+    host: "localhost"
+    port: 5010
+  
+  # Real-time Database
+  rdb:
+    host: "localhost"
+    port: 5011
+  
+  # Historical Database
+  hdb:
+    host: "localhost"
+    port: 5012
+    data_path: "./data/hdb"
+
+# Data Sources
+data_sources:
+  # Yahoo Finance (primary for historical data)
+  yfinance:
+    enabled: true
+    rate_limit: 2000  # requests per hour
+    cache_ttl: 300    # cache quotes for 5 minutes
+  
+  # FRED API (economic data)
+  fred:
+    enabled: true
+    api_key: "${FRED_API_KEY}"
+  
+  # EOD Data
+  eoddata:
+    enabled: false
+    api_key: "${EODDATA_API_KEY}"
+
+# Default symbols for watchlist
+default_symbols:
+  - "AAPL"
+  - "MSFT"
+  - "GOOGL"
+  - "AMZN"
+  - "META"
+  - "NVDA"
+  - "TSLA"
+  - "SPY"
+  - "QQQ"
+
+# Backtest defaults
+backtest:
+  initial_capital: 100000
+  commission: 0.001      # 0.1%
+  slippage: 0.0005       # 0.05%
+  risk_free_rate: 0.05   # 5% annual
+  max_position_size: 0.1 # 10% of portfolio per position
+
+# Risk management
+risk:
+  max_drawdown_limit: 0.2     # 20% max drawdown
+  max_position_size: 0.1      # 10% per position
+  max_correlation: 0.7        # Max correlation between positions
+  daily_loss_limit: 0.02      # 2% daily loss limit
+
+# Trading hours (Eastern Time)
+market_hours:
+  pre_market:
+    start: "04:00"
+    end: "09:30"
+  regular:
+    start: "09:30"
+    end: "16:00"
+  after_hours:
+    start: "16:00"
+    end: "20:00"

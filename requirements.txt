@@ -1,0 +1,29 @@
+# Algo-Trader Python Dependencies
+# ================================
+
+# KDB+/Q Integration
+pykx>=3.0.0
+
+# Data Fetching
+yfinance>=0.2.40
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+
+# Analytics & Technical Indicators
+ta>=0.11.0              # Technical Analysis library
+scipy>=1.11.0           # Scientific computing
+
+# API & Server
+fastapi>=0.109.0
+uvicorn>=0.27.0
+websockets>=12.0
+python-dotenv>=1.0.0
+
+# Visualization (for backtest reports)
+plotly>=5.18.0
+kaleido>=0.2.1          # For static image export
+
+# Development
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

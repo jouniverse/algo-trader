@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo-Trader | Analytics Dashboard</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    
+    <style>
+        :root {
+            /* Nord-inspired dark theme */
+            --bg-primary: #1a1d24;
+            --bg-secondary: #22262f;
+            --bg-tertiary: #2a2f3a;
+            --bg-hover: #333945;
+            
+            --text-primary: #eceff4;
+            --text-secondary: #a3adc2;
+            --text-muted: #6b7894;
+            
+            --accent-cyan: #88c0d0;
+            --accent-teal: #8fbcbb;
+            --accent-green: #a3be8c;
+            --accent-yellow: #ebcb8b;
+            --accent-orange: #d08770;
+            --accent-red: #bf616a;
+            --accent-purple: #b48ead;
+            
+            --border-color: #3b4252;
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+            
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            
+            --font-sans: 'Outfit', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .logo-text {
+            font-weight: 600;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span {
+            color: var(--accent-cyan);
+        }
+
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-family: var(--font-mono);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Main Layout */
+        .main {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            min-height: calc(100vh - 65px);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .panel {
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+        }
+
+        .panel-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 0.6rem 0.9rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 0 3px rgba(136, 192, 208, 0.15);
+        }
+
+        .form-select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236b7894' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            padding-right: 2.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.7rem 1.25rem;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-sans);
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-teal));
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(136, 192, 208, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border-color);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 1.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .stat-value.positive { color: var(--accent-green); }
+        .stat-value.negative { color: var(--accent-red); }
+        .stat-value.neutral { color: var(--accent-cyan); }
+
+        .stat-change {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            flex: 1;
+            min-height: 400px;
+            position: relative;
+        }
+
+        .chart-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .chart-title {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .chart-tabs {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chart-tab {
+            padding: 0.4rem 0.8rem;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .chart-tab:hover, .chart-tab.active {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-color: var(--accent-cyan);
+        }
+
+        .chart-wrapper {
+            height: calc(100% - 50px);
+            min-height: 350px;
+        }
+
+        /* Trades Table */
+        .trades-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .trades-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .trades-title {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .trades-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .trades-table th,
+        .trades-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.85rem;
+        }
+
+        .trades-table th {
+            background: var(--bg-tertiary);
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        .trades-table tr:not(:last-child) td {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .trades-table tr:hover td {
+            background: var(--bg-hover);
+        }
+
+        .trades-table td {
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+        }
+
+        .trades-header-right {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .trades-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-tertiary);
+        }
+
+        .pagination-info {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .btn-sm {
+            padding: 0.35rem 0.75rem;
+            font-size: 0.75rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-buy {
+            background: rgba(163, 190, 140, 0.2);
+            color: var(--accent-green);
+        }
+
+        .badge-sell {
+            background: rgba(191, 97, 106, 0.2);
+            color: var(--accent-red);
+        }
+
+        /* Loading State */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-cyan);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Empty State */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Macro Context */
+        .macro-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .macro-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .macro-header:hover {
+            background: var(--bg-hover);
+        }
+
+        .macro-title {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .macro-toggle {
+            color: var(--text-muted);
+            transition: transform 0.2s;
+        }
+
+        .macro-toggle.collapsed {
+            transform: rotate(-90deg);
+        }
+
+        .macro-content {
+            padding: 1rem 1.5rem;
+            transition: max-height 0.3s ease;
+        }
+
+        .macro-content.collapsed {
+            display: none;
+        }
+
+        .macro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .macro-card {
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .macro-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .macro-value {
+            font-family: var(--font-mono);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+        }
+
+        .macro-range {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .macro-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">A</div>
+            <div class="logo-text">Algo<span>Trader</span></div>
+        </div>
+        <div class="header-status">
+            <div class="status-dot"></div>
+            <span id="status-text">Ready</span>
+        </div>
+    </header>
+
+    <main class="main">
+        <aside class="sidebar">
+            <!-- Symbol & Data -->
+            <div class="panel">
+                <div class="panel-title">Market Data</div>
+                <div class="form-group">
+                    <label class="form-label">Symbol</label>
+                    <input type="text" id="symbol-input" class="form-input" value="AAPL" placeholder="e.g., AAPL, MSFT">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Period</label>
+                    <select id="period-select" class="form-select">
+                        <option value="1mo">1 Month</option>
+                        <option value="3mo">3 Months</option>
+                        <option value="6mo">6 Months</option>
+                        <option value="1y" selected>1 Year</option>
+                        <option value="2y">2 Years</option>
+                        <option value="5y">5 Years</option>
+                    </select>
+                </div>
+                <button id="fetch-btn" class="btn btn-secondary btn-full">
+                    📊 Fetch Data
+                </button>
+            </div>
+
+            <!-- Strategy -->
+            <div class="panel">
+                <div class="panel-title">Strategy</div>
+                <div class="form-group">
+                    <label class="form-label">Strategy Type</label>
+                    <select id="strategy-select" class="form-select">
+                        <option value="buy_hold">📈 Buy & Hold (Baseline)</option>
+                        <option value="momentum" selected>📊 Momentum (MA Crossover)</option>
+                        <option value="macd">📉 MACD Crossover</option>
+                        <option value="rsi">⚡ RSI Strategy</option>
+                        <option value="trend_following">🔄 Trend Following</option>
+                        <option value="bollinger">📐 Bollinger Bands</option>
+                        <option value="mean_reversion">↩️ Mean Reversion</option>
+                        <option value="pairs_trading">🔀 Pairs Trading</option>
+                    </select>
+                </div>
+                
+                <!-- Strategy Parameters (dynamic) -->
+                <div id="strategy-params"></div>
+                
+                <div class="form-group">
+                    <label class="form-label">Initial Capital</label>
+                    <input type="number" id="capital-input" class="form-input" value="100000" min="1000" step="1000">
+                </div>
+                
+                <button id="backtest-btn" class="btn btn-primary btn-full">
+                    ▶ Run Backtest
+                </button>
+            </div>
+        </aside>
+
+        <section class="content">
+            <!-- Stats -->
+            <div class="stats-grid" id="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Total Return</div>
+                    <div class="stat-value neutral" id="stat-return">--</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Sharpe Ratio</div>
+                    <div class="stat-value neutral" id="stat-sharpe">--</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Max Drawdown</div>
+                    <div class="stat-value neutral" id="stat-drawdown">--</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Win Rate</div>
+                    <div class="stat-value neutral" id="stat-winrate">--</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Trades</div>
+                    <div class="stat-value neutral" id="stat-trades">--</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Profit Factor</div>
+                    <div class="stat-value neutral" id="stat-pf">--</div>
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title" id="chart-title">Equity Curve</h3>
+                    <div class="chart-tabs">
+                        <button class="chart-tab active" data-chart="equity">Equity</button>
+                        <button class="chart-tab" data-chart="price">Price</button>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="main-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Macro Context -->
+            <div class="macro-container" id="macro-container" style="display: none;">
+                <div class="macro-header" onclick="toggleMacro()">
+                    <h3 class="macro-title">📊 Economic Context</h3>
+                    <span class="macro-toggle" id="macro-toggle">▼</span>
+                </div>
+                <div class="macro-content" id="macro-content">
+                    <div class="macro-grid">
+                        <div class="macro-card">
+                            <div class="macro-label">VIX (Volatility)</div>
+                            <div class="macro-value" id="macro-vix">--</div>
+                            <div class="macro-range" id="macro-vix-range"></div>
+                        </div>
+                        <div class="macro-card">
+                            <div class="macro-label">Fed Funds Rate</div>
+                            <div class="macro-value" id="macro-fed">--</div>
+                            <div class="macro-range" id="macro-fed-range"></div>
+                        </div>
+                        <div class="macro-card">
+                            <div class="macro-label">10Y Treasury</div>
+                            <div class="macro-value" id="macro-10y">--</div>
+                            <div class="macro-range" id="macro-10y-range"></div>
+                        </div>
+                        <div class="macro-card">
+                            <div class="macro-label">S&P 500</div>
+                            <div class="macro-value" id="macro-sp500">--</div>
+                            <div class="macro-range" id="macro-sp500-range"></div>
+                        </div>
+                    </div>
+                    <div class="macro-note">
+                        <em>Economic conditions during backtest period</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trades -->
+            <div class="trades-container" id="trades-container" style="display: none;">
+                <div class="trades-header">
+                    <h3 class="trades-title">Trade History</h3>
+                    <div class="trades-header-right">
+                        <span id="trades-count" class="badge">0 trades</span>
+                    </div>
+                </div>
+                <table class="trades-table">
+                    <thead>
+                        <tr>
+                            <th>Exit Date</th>
+                            <th>Side</th>
+                            <th>Days</th>
+                            <th>Qty</th>
+                            <th>Entry</th>
+                            <th>Exit</th>
+                            <th>P&L</th>
+                            <th>Return</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trades-tbody">
+                    </tbody>
+                </table>
+                <div class="trades-pagination" id="trades-pagination">
+                    <button class="btn btn-secondary btn-sm" id="trades-prev" onclick="prevTrades()">← Prev</button>
+                    <span class="pagination-info" id="pagination-info">1-20 of 0</span>
+                    <button class="btn btn-secondary btn-sm" id="trades-next" onclick="nextTrades()">Next →</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // ====================================================================
+        // State
+        // ====================================================================
+        const API_URL = 'http://localhost:8000';
+        let priceData = [];
+        let backtestResult = null;
+        let mainChart = null;
+        let currentChartType = 'equity';
+        
+        // Trade pagination state
+        let allTrades = [];
+        let tradesPage = 0;
+        const tradesPerPage = 15;
+
+        // ====================================================================
+        // DOM Elements
+        // ====================================================================
+        const symbolInput = document.getElementById('symbol-input');
+        const periodSelect = document.getElementById('period-select');
+        const strategySelect = document.getElementById('strategy-select');
+        const capitalInput = document.getElementById('capital-input');
+        const fetchBtn = document.getElementById('fetch-btn');
+        const backtestBtn = document.getElementById('backtest-btn');
+        const statusText = document.getElementById('status-text');
+        const strategyParams = document.getElementById('strategy-params');
+
+        // ====================================================================
+        // Strategy Parameters
+        // ====================================================================
+        const strategyParamsConfig = {
+            buy_hold: [],  // No parameters for buy & hold
+            momentum: [
+                { id: 'fast_period', label: 'Fast MA Period', type: 'number', default: 10, min: 2, max: 50 },
+                { id: 'slow_period', label: 'Slow MA Period', type: 'number', default: 30, min: 10, max: 200 }
+            ],
+            macd: [
+                { id: 'fast_period', label: 'Fast EMA', type: 'number', default: 12, min: 5, max: 20 },
+                { id: 'slow_period', label: 'Slow EMA', type: 'number', default: 26, min: 15, max: 40 },
+                { id: 'signal_period', label: 'Signal Line', type: 'number', default: 9, min: 5, max: 15 }
+            ],
+            rsi: [
+                { id: 'period', label: 'RSI Period', type: 'number', default: 14, min: 5, max: 30 },
+                { id: 'oversold', label: 'Oversold Level', type: 'number', default: 30, min: 10, max: 40 },
+                { id: 'overbought', label: 'Overbought Level', type: 'number', default: 70, min: 60, max: 90 }
+            ],
+            trend_following: [
+                { id: 'short_period', label: 'Short MA', type: 'number', default: 10, min: 5, max: 20 },
+                { id: 'medium_period', label: 'Medium MA', type: 'number', default: 50, min: 20, max: 100 },
+                { id: 'long_period', label: 'Long MA', type: 'number', default: 200, min: 100, max: 300 }
+            ],
+            bollinger: [
+                { id: 'period', label: 'Period', type: 'number', default: 20, min: 10, max: 50 },
+                { id: 'std_dev', label: 'Std Deviations', type: 'number', default: 2.0, min: 1.0, max: 3.0, step: 0.1 }
+            ],
+            mean_reversion: [
+                { id: 'lookback', label: 'Lookback Period', type: 'number', default: 20, min: 10, max: 60 },
+                { id: 'z_threshold', label: 'Entry Z-Score', type: 'number', default: 2.0, min: 1.0, max: 3.0, step: 0.1 },
+                { id: 'exit_threshold', label: 'Exit Z-Score', type: 'number', default: 0.5, min: 0.0, max: 1.5, step: 0.1 }
+            ],
+            pairs_trading: [
+                { id: 'lookback', label: 'Lookback Period', type: 'number', default: 60, min: 20, max: 120 },
+                { id: 'entry_z', label: 'Entry Z-Score', type: 'number', default: 2.0, min: 1.0, max: 3.0, step: 0.1 },
+                { id: 'exit_z', label: 'Exit Z-Score', type: 'number', default: 0.5, min: 0.0, max: 1.5, step: 0.1 }
+            ]
+        };
+
+        function renderStrategyParams() {
+            const strategy = strategySelect.value;
+            const params = strategyParamsConfig[strategy] || [];
+            
+            strategyParams.innerHTML = params.map(p => `
+                <div class="form-group">
+                    <label class="form-label">${p.label}</label>
+                    <input type="number" id="param-${p.id}" class="form-input" 
+                           value="${p.default}" min="${p.min}" max="${p.max}" 
+                           step="${p.step || 1}">
+                </div>
+            `).join('');
+        }
+
+        function getStrategyParams() {
+            const strategy = strategySelect.value;
+            const config = strategyParamsConfig[strategy] || [];
+            const params = {};
+            
+            config.forEach(p => {
+                const input = document.getElementById(`param-${p.id}`);
+                if (input) {
+                    params[p.id] = parseFloat(input.value);
+                }
+            });
+            
+            return params;
+        }
+
+        // ====================================================================
+        // Chart
+        // ====================================================================
+        function initChart() {
+            const ctx = document.getElementById('main-chart').getContext('2d');
+            
+            mainChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    datasets: [{
+                        label: 'Value',
+                        data: [],
+                        borderColor: '#88c0d0',
+                        backgroundColor: 'rgba(136, 192, 208, 0.1)',
+                        fill: true,
+                        tension: 0.1,
+                        pointRadius: 0,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: '#22262f',
+                            titleColor: '#eceff4',
+                            bodyColor: '#a3adc2',
+                            borderColor: '#3b4252',
+                            borderWidth: 1,
+                            padding: 12,
+                            displayColors: false,
+                            callbacks: {
+                                label: (ctx) => `Value: $${ctx.parsed.y.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'month',
+                                displayFormats: {
+                                    month: 'MMM yyyy'
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(59, 66, 82, 0.5)'
+                            },
+                            ticks: {
+                                color: '#6b7894'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(59, 66, 82, 0.5)'
+                            },
+                            ticks: {
+                                color: '#6b7894',
+                                callback: (value) => '$' + value.toLocaleString()
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateChart(data, type = 'equity') {
+            if (!mainChart) return;
+            
+            const chartTitle = document.getElementById('chart-title');
+            
+            if (type === 'equity' && backtestResult) {
+                chartTitle.textContent = 'Equity Curve';
+                mainChart.data.datasets[0].data = backtestResult.equity_curve.map(d => ({
+                    x: new Date(d.timestamp),
+                    y: d.equity
+                }));
+                mainChart.data.datasets[0].borderColor = '#88c0d0';
+                mainChart.data.datasets[0].backgroundColor = 'rgba(136, 192, 208, 0.1)';
+            } else if (type === 'price' && priceData.length > 0) {
+                chartTitle.textContent = `${symbolInput.value.toUpperCase()} Price`;
+                mainChart.data.datasets[0].data = priceData.map(d => ({
+                    x: new Date(d.timestamp),
+                    y: d.close
+                }));
+                mainChart.data.datasets[0].borderColor = '#b48ead';
+                mainChart.data.datasets[0].backgroundColor = 'rgba(180, 142, 173, 0.1)';
+            }
+            
+            mainChart.update();
+        }
+
+        // ====================================================================
+        // Stats
+        // ====================================================================
+        function updateStats(metrics) {
+            const formatPercent = (v) => (v !== undefined && v !== null) ? (v * 100).toFixed(2) + '%' : '--';
+            const formatNumber = (v, decimals = 2) => (v !== undefined && v !== null) ? v.toFixed(decimals) : '--';
+            
+            const returnEl = document.getElementById('stat-return');
+            const returnVal = metrics.total_return;
+            returnEl.textContent = formatPercent(returnVal);
+            returnEl.className = 'stat-value ' + (returnVal >= 0 ? 'positive' : 'negative');
+            
+            const sharpeEl = document.getElementById('stat-sharpe');
+            sharpeEl.textContent = formatNumber(metrics.sharpe_ratio);
+            sharpeEl.className = 'stat-value ' + (metrics.sharpe_ratio >= 1 ? 'positive' : metrics.sharpe_ratio >= 0 ? 'neutral' : 'negative');
+            
+            const ddEl = document.getElementById('stat-drawdown');
+            ddEl.textContent = formatPercent(metrics.max_drawdown);
+            ddEl.className = 'stat-value negative';
+            
+            const wrEl = document.getElementById('stat-winrate');
+            wrEl.textContent = formatPercent(metrics.win_rate);
+            wrEl.className = 'stat-value ' + (metrics.win_rate >= 0.5 ? 'positive' : 'neutral');
+            
+            document.getElementById('stat-trades').textContent = metrics.num_trades || '--';
+            
+            const pfEl = document.getElementById('stat-pf');
+            // null profit_factor means infinity (no losing trades)
+            if (metrics.profit_factor === null) {
+                pfEl.textContent = '∞';
+                pfEl.className = 'stat-value positive';
+            } else {
+                pfEl.textContent = formatNumber(metrics.profit_factor);
+                pfEl.className = 'stat-value ' + (metrics.profit_factor >= 1.5 ? 'positive' : metrics.profit_factor >= 1 ? 'neutral' : 'negative');
+            }
+        }
+
+        // ====================================================================
+        // Macro Context
+        // ====================================================================
+        let macroExpanded = true;
+
+        function toggleMacro() {
+            macroExpanded = !macroExpanded;
+            const content = document.getElementById('macro-content');
+            const toggle = document.getElementById('macro-toggle');
+            
+            if (macroExpanded) {
+                content.classList.remove('collapsed');
+                toggle.classList.remove('collapsed');
+            } else {
+                content.classList.add('collapsed');
+                toggle.classList.add('collapsed');
+            }
+        }
+
+        async function fetchMacroContext(startDate, endDate) {
+            const container = document.getElementById('macro-container');
+            
+            try {
+                const res = await fetch(`${API_URL}/api/macro/${startDate}/${endDate}`);
+                if (!res.ok) {
+                    console.log('Macro data not available');
+                    container.style.display = 'none';
+                    return;
+                }
+                
+                const data = await res.json();
+                updateMacroDisplay(data.indicators);
+                container.style.display = 'block';
+                
+            } catch (err) {
+                console.log('Could not fetch macro data:', err);
+                container.style.display = 'none';
+            }
+        }
+
+        function updateMacroDisplay(indicators) {
+            const formatValue = (v, decimals = 2) => v !== null && v !== undefined ? v.toFixed(decimals) : '--';
+            const formatRange = (min, max, decimals = 2) => {
+                if (min === null || max === null) return '';
+                return `Range: ${min.toFixed(decimals)} - ${max.toFixed(decimals)}`;
+            };
+            
+            // VIX
+            if (indicators.vix) {
+                document.getElementById('macro-vix').textContent = formatValue(indicators.vix.avg, 1);
+                document.getElementById('macro-vix-range').textContent = formatRange(indicators.vix.min, indicators.vix.max, 1);
+            }
+            
+            // Fed Funds Rate
+            if (indicators.fed_funds) {
+                document.getElementById('macro-fed').textContent = formatValue(indicators.fed_funds.avg, 2) + '%';
+                document.getElementById('macro-fed-range').textContent = formatRange(indicators.fed_funds.min, indicators.fed_funds.max);
+            }
+            
+            // 10Y Treasury
+            if (indicators.treasury_10y) {
+                document.getElementById('macro-10y').textContent = formatValue(indicators.treasury_10y.avg, 2) + '%';
+                document.getElementById('macro-10y-range').textContent = formatRange(indicators.treasury_10y.min, indicators.treasury_10y.max);
+            }
+            
+            // S&P 500
+            if (indicators.sp500) {
+                document.getElementById('macro-sp500').textContent = formatValue(indicators.sp500.avg, 0);
+                document.getElementById('macro-sp500-range').textContent = formatRange(indicators.sp500.min, indicators.sp500.max, 0);
+            }
+        }
+
+        // ====================================================================
+        // Trades Table with Pagination
+        // ====================================================================
+        function updateTrades(trades) {
+            const container = document.getElementById('trades-container');
+            const countBadge = document.getElementById('trades-count');
+            const pagination = document.getElementById('trades-pagination');
+            
+            if (!trades || trades.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+            
+            container.style.display = 'block';
+            allTrades = trades;
+            tradesPage = 0;
+            countBadge.textContent = `${trades.length} trades`;
+            
+            // Show pagination only if more than one page
+            pagination.style.display = trades.length > tradesPerPage ? 'flex' : 'none';
+            
+            renderTradesPage();
+        }
+        
+        function renderTradesPage() {
+            const tbody = document.getElementById('trades-tbody');
+            const paginationInfo = document.getElementById('pagination-info');
+            const prevBtn = document.getElementById('trades-prev');
+            const nextBtn = document.getElementById('trades-next');
+            
+            const start = tradesPage * tradesPerPage;
+            const end = Math.min(start + tradesPerPage, allTrades.length);
+            const pageTrades = allTrades.slice(start, end);
+            
+            // Calculate days held for each trade
+            tbody.innerHTML = pageTrades.map(t => {
+                const entryDate = new Date(t.entry_time);
+                const exitDate = new Date(t.exit_time);
+                const daysHeld = Math.max(1, Math.round((exitDate - entryDate) / (1000 * 60 * 60 * 24)));
+                
+                return `
+                <tr>
+                    <td>${exitDate.toLocaleDateString()}</td>
+                    <td><span class="badge badge-${t.side.toLowerCase()}">${t.side}</span></td>
+                    <td>${daysHeld}d</td>
+                    <td>${t.quantity}</td>
+                    <td>$${t.entry_price.toFixed(2)}</td>
+                    <td>$${t.exit_price.toFixed(2)}</td>
+                    <td style="color: ${t.pnl >= 0 ? 'var(--accent-green)' : 'var(--accent-red)'}">
+                        ${t.pnl >= 0 ? '+' : ''}$${t.pnl.toFixed(2)}
+                    </td>
+                    <td style="color: ${t.return_pct >= 0 ? 'var(--accent-green)' : 'var(--accent-red)'}">
+                        ${t.return_pct >= 0 ? '+' : ''}${(t.return_pct * 100).toFixed(2)}%
+                    </td>
+                </tr>
+            `}).join('');
+            
+            // Update pagination info
+            paginationInfo.textContent = `${start + 1}-${end} of ${allTrades.length}`;
+            
+            // Enable/disable buttons
+            prevBtn.disabled = tradesPage === 0;
+            nextBtn.disabled = end >= allTrades.length;
+        }
+        
+        function prevTrades() {
+            if (tradesPage > 0) {
+                tradesPage--;
+                renderTradesPage();
+            }
+        }
+        
+        function nextTrades() {
+            if ((tradesPage + 1) * tradesPerPage < allTrades.length) {
+                tradesPage++;
+                renderTradesPage();
+            }
+        }
+
+        // ====================================================================
+        // API Calls
+        // ====================================================================
+        async function fetchData() {
+            const symbol = symbolInput.value.trim().toUpperCase();
+            const period = periodSelect.value;
+            
+            if (!symbol) return;
+            
+            setStatus('Fetching data...', false);
+            fetchBtn.disabled = true;
+            
+            try {
+                const res = await fetch(`${API_URL}/api/ohlcv/${symbol}?period=${period}`);
+                if (!res.ok) throw new Error('Failed to fetch data');
+                
+                priceData = await res.json();
+                setStatus(`Loaded ${priceData.length} bars`, true);
+                
+                if (currentChartType === 'price') {
+                    updateChart(priceData, 'price');
+                }
+            } catch (err) {
+                setStatus('Error: ' + err.message, true);
+            } finally {
+                fetchBtn.disabled = false;
+            }
+        }
+
+        async function runBacktest() {
+            const symbol = symbolInput.value.trim().toUpperCase();
+            const period = periodSelect.value;
+            const strategy = strategySelect.value;
+            const capital = parseFloat(capitalInput.value);
+            const params = getStrategyParams();
+            
+            if (!symbol) return;
+            
+            setStatus('Running backtest...', false);
+            backtestBtn.disabled = true;
+            
+            try {
+                const res = await fetch(`${API_URL}/api/backtest`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        symbol,
+                        strategy,
+                        period,
+                        initial_capital: capital,
+                        params
+                    })
+                });
+                
+                if (!res.ok) {
+                    const error = await res.json();
+                    throw new Error(error.detail || 'Backtest failed');
+                }
+                
+                backtestResult = await res.json();
+                
+                updateStats(backtestResult.metrics);
+                updateTrades(backtestResult.trades);
+                currentChartType = 'equity';
+                updateChartTabs();
+                updateChart(null, 'equity');
+                
+                // Fetch macro context for the backtest period
+                if (backtestResult.equity_curve && backtestResult.equity_curve.length > 0) {
+                    // Extract just the date part (YYYY-MM-DD) from timestamps
+                    const extractDate = (ts) => {
+                        // Handle various timestamp formats
+                        const d = new Date(ts);
+                        return d.toISOString().split('T')[0];
+                    };
+                    const startDate = extractDate(backtestResult.equity_curve[0].timestamp);
+                    const endDate = extractDate(backtestResult.equity_curve[backtestResult.equity_curve.length - 1].timestamp);
+                    fetchMacroContext(startDate, endDate);
+                }
+                
+                setStatus('Backtest complete', true);
+            } catch (err) {
+                setStatus('Error: ' + err.message, true);
+            } finally {
+                backtestBtn.disabled = false;
+            }
+        }
+
+        function setStatus(message, ready = true) {
+            statusText.textContent = message;
+            const dot = document.querySelector('.status-dot');
+            dot.style.background = ready ? 'var(--accent-green)' : 'var(--accent-yellow)';
+        }
+
+        function updateChartTabs() {
+            document.querySelectorAll('.chart-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.chart === currentChartType);
+            });
+        }
+
+        // ====================================================================
+        // Event Listeners
+        // ====================================================================
+        fetchBtn.addEventListener('click', fetchData);
+        backtestBtn.addEventListener('click', runBacktest);
+        strategySelect.addEventListener('change', renderStrategyParams);
+
+        document.querySelectorAll('.chart-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                currentChartType = tab.dataset.chart;
+                updateChartTabs();
+                updateChart(null, currentChartType);
+            });
+        });
+
+        // Enter key handlers
+        symbolInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') fetchData();
+        });
+
+        // ====================================================================
+        // Initialize
+        // ====================================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            initChart();
+            renderStrategyParams();
+        });
+    </script>
+</body>
+</html>
