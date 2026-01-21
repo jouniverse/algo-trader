@@ -412,7 +412,7 @@ The app currently runs as **pure Python** for simplicity and rapid development:
 - [ ] Portfolio-level backtesting
 - [ ] Paper trading simulation
 - [ ] Broker integration for live trading (Alpaca, IBKR)
-- [?]  Bug Fixing
+- [ ]  Bug Fixing?
 
 ---
 
