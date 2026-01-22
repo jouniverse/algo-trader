@@ -375,7 +375,7 @@ Default Buy-and-Hold vs Mean Reversion strategy on COKE ticker (2yrs period): 8.
 |--------|------|--------|
 | Yahoo Finance | Historical OHLCV, Quotes | ✅ Implemented |
 | FRED | Economic Data | ✅ Implemented |
-| EOD Data | EOD Prices | 🔧 Planned |
+| EOD Data (or other) | EOD Prices | 🔧 Planned |
 | Alpha Vantage (or other) | Real-time Data | 🔧 Planned |
 
 ---
