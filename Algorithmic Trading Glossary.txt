@@ -836,6 +836,8 @@ Slicing = The process of dividing a dataset into smaller, more manageable segmen
 ---------------------------------------------------------------------------------------------------
 Slippage = The difference between the expected price of a trade and the actual price at which the trade is executed, often occurring during periods of high volatility or low liquidity.
 ---------------------------------------------------------------------------------------------------
+Slippage reduction = Techniques and strategies employed to minimize the impact of slippage on trade execution, such as using limit orders, optimizing order size, and timing trades during periods of higher liquidity.
+---------------------------------------------------------------------------------------------------
 SMA = See: Simple moving average
 ---------------------------------------------------------------------------------------------------
 Small-cap = Refers to companies with a small market capitalization, typically between $300 million and $2 billion, which are considered to have higher growth potential but also higher risk.
