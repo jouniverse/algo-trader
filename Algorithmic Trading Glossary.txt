@@ -124,7 +124,11 @@ Broker routing = The process by which a broker directs client orders to specific
 ---------------------------------------------------------------------------------------------------
 Bubble = A market condition characterized by rapid and unsustainable price increases, often driven by speculative behavior, followed by a sharp decline or crash.
 ---------------------------------------------------------------------------------------------------
+Bullion = Physical precious metals, such as gold or silver, typically in the form of bars or coins, used for investment or as a store of value.
+---------------------------------------------------------------------------------------------------
 Bullish = A market sentiment characterized by rising prices and optimism about future market performance.
+---------------------------------------------------------------------------------------------------
+Bull run = A sustained period of rising prices in the stock market or a specific asset class, often driven by positive investor sentiment and economic growth.
 ---------------------------------------------------------------------------------------------------
 Buy-and-Hold strategy = A passive investment strategy that involves buying a security and holding it for a long period, regardless of market fluctuations.
 ---------------------------------------------------------------------------------------------------
@@ -464,6 +468,8 @@ Itô calculus = A branch of mathematics that deals with stochastic processes and
 ---------------------------------------------------------------------------------------------------
 Jump-diffusion model = A mathematical model used to describe asset price movements that incorporate both continuous diffusion and sudden jumps, often applied in option pricing and risk management.
 ---------------------------------------------------------------------------------------------------
+Junk bond = A high-yield, high-risk bond issued by a company with a lower credit rating, offering higher interest rates to compensate for the increased risk of default.
+---------------------------------------------------------------------------------------------------
 Kalman filter = A recursive algorithm used to estimate the state of a dynamic system from a series of noisy measurements, often applied in financial modeling for time series analysis and forecasting.
 ---------------------------------------------------------------------------------------------------
 kdb+/q = A high-performance time-series database (kdb+) and its associated programming language (q) commonly used in financial services for real-time and historical data analysis.
@@ -529,6 +535,10 @@ Macro trend = A long-term directional movement in the market or economy, often d
 Machine learning = A subset of artificial intelligence that involves the use of algorithms and statistical models to enable computers to improve their performance on a specific task through experience and data.
 ---------------------------------------------------------------------------------------------------
 "Malkiel's monkey" = A reference to the idea proposed by economist Burton Malkiel that a monkey randomly selecting stocks could perform as well as professional fund managers, highlighting the challenges of consistently outperforming the market.
+---------------------------------------------------------------------------------------------------
+Margin account = A brokerage account that allows investors to borrow funds from the broker to purchase securities, using the securities in the account as collateral.
+---------------------------------------------------------------------------------------------------
+Margin call = A demand by a broker for an investor to deposit additional funds or securities into their margin account to cover potential losses, typically triggered when the account's equity falls below a certain threshold.
 ---------------------------------------------------------------------------------------------------
 Market = A venue where buyers and sellers come together to trade financial instruments, such as stocks, bonds, commodities, and derivatives.
 ---------------------------------------------------------------------------------------------------
@@ -602,6 +612,8 @@ NBBO = National Best Bid and Offer, the highest bid price and lowest ask price a
 ---------------------------------------------------------------------------------------------------
 Neural network (NN) = A computational model inspired by the structure and function of the human brain, consisting of interconnected nodes (neurons) that process information and learn patterns from data.
 ---------------------------------------------------------------------------------------------------
+NFT = Non-fungible token, a unique digital asset that represents ownership of a specific item or piece of content, often used in the context of digital art and collectibles on blockchain platforms.
+---------------------------------------------------------------------------------------------------
 NLP = See: Natural Language Processing
 ---------------------------------------------------------------------------------------------------
 NN = See: Neural network
@@ -618,9 +630,13 @@ Normal distribution = A probability distribution that is symmetric about the mea
 ---------------------------------------------------------------------------------------------------
 Normality = A statistical property indicating that a dataset or distribution follows a normal (Gaussian) distribution, characterized by a symmetric bell-shaped curve.
 ---------------------------------------------------------------------------------------------------
+Normality assumption = The assumption that a dataset or distribution follows a normal (Gaussian) distribution, which is important for many statistical analyses and hypothesis tests.
+---------------------------------------------------------------------------------------------------
 Normality of residuals = A statistical assumption that the residuals (errors) of a regression model are normally distributed, which is important for valid hypothesis testing and confidence interval estimation.
 ---------------------------------------------------------------------------------------------------
 Normalization = The process of adjusting values measured on different scales to a common scale, often used in data preprocessing to improve the performance of machine learning algorithms.
+---------------------------------------------------------------------------------------------------
+Obligation = A legal or financial commitment to perform a specific action, such as repaying a debt or fulfilling a contract.
 ---------------------------------------------------------------------------------------------------
 Offsetting = The practice of entering into a trade that counteracts an existing position, effectively closing it out and realizing any gains or losses.
 ---------------------------------------------------------------------------------------------------
@@ -684,13 +700,15 @@ Portfolio = A collection of financial assets, such as stocks, bonds, commodities
 ---------------------------------------------------------------------------------------------------
 Portfolio-level backtesting = The process of testing a trading strategy across an entire portfolio of assets using historical data to evaluate overall performance and risk.
 ---------------------------------------------------------------------------------------------------
-Portfolio manager = An individual, firm or an AI agent responsible for managing a portfolio of investments on behalf of clients, making decisions about asset allocation, security selection, and risk management.
+Portfolio manager = An individual, firm or maybe an AI agent responsible for managing a portfolio of investments on behalf of clients, making decisions about asset allocation, security selection, and risk management.
 ---------------------------------------------------------------------------------------------------
 Portfolio optimization = The process of selecting the best distribution of assets in a portfolio to maximize returns while minimizing risk, often using mathematical models and algorithms.
 ---------------------------------------------------------------------------------------------------
 Position = The amount of a particular security or asset held by an investor or trader, which can be either long (ownership) or short (obligation to sell).
 ---------------------------------------------------------------------------------------------------
 Post‑trade control = A set of risk management procedures implemented after executing trades to monitor and evaluate trading activities for compliance with regulatory requirements and internal policies.
+---------------------------------------------------------------------------------------------------
+Prediction market = A market where participants can buy and sell contracts based on the outcome of future events, allowing for the aggregation of information and the prediction of event probabilities.
 ---------------------------------------------------------------------------------------------------
 Premium = The price paid for an option contract, representing the cost of acquiring the right to buy or sell the underlying asset.
 ---------------------------------------------------------------------------------------------------
