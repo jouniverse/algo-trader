@@ -86,6 +86,8 @@ python -m http.server 3000 --directory src/ui
 
 Navigate to `http://localhost:3000`
 
+**NOTE**: Add a file `./config/API_KEYS.txt` with your API keys if needed. Currently only FRED API key is required for economic data.
+
 ---
 
 ## Architecture
@@ -357,7 +359,7 @@ The "Days" column in Trade History shows actual holding duration per trade.
 
 ## UI
 
-Default Buy-and-Hold vs Mean Reversion Strategy on COKE ticker (2yrs period): 8.45% vs 11.10% total return.
+Default Buy-and-Hold vs Mean Reversion strategy on COKE ticker (2yrs period): 8.45% vs 11.10% total return.
 
 ![Buy-and-Hold](./imgs/ui-0.png)
 ![Mean Reversion COKE Equity Curve](./imgs/ui-1.png)
