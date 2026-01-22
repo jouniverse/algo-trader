@@ -628,6 +628,8 @@ Multicollinearity reduction module (MRM) = A computational tool or algorithm des
 ---------------------------------------------------------------------------------------------------
 Multinomial logistic regression = A statistical method used for modeling the relationship between a categorical dependent variable with more than two levels and one or more independent variables.
 ---------------------------------------------------------------------------------------------------
+Murphy's law = The adage that "anything that can go wrong, will go wrong," often cited in risk management and trading to emphasize the importance of preparing for unexpected events.
+---------------------------------------------------------------------------------------------------
 Mutual fund = An investment vehicle that pools money from multiple investors to purchase a diversified portfolio of securities, managed by professional portfolio managers.
 ---------------------------------------------------------------------------------------------------
 Narconomics = The application of economic theories and principles to understand the operations and behaviors of illegal drug markets.
@@ -821,6 +823,8 @@ Residuals = The differences between observed values and the values predicted by 
 Return on wealth (r) = The percentage change in the value of an investment or portfolio over a specified period, reflecting the overall profitability of the investment.
 ---------------------------------------------------------------------------------------------------
 Revenue = The total income generated from trading activities before deducting any expenses or costs.
+---------------------------------------------------------------------------------------------------
+Shortfall = The financial loss incurred from a trading activity when the costs exceed the revenues generated.
 ---------------------------------------------------------------------------------------------------
 Risk = The potential for loss or uncertainty associated with an investment or trading strategy.
 ---------------------------------------------------------------------------------------------------
