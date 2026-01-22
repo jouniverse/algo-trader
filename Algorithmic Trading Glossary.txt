@@ -176,6 +176,8 @@ Closing price = The final price at which a security is traded on a given trading
 ---------------------------------------------------------------------------------------------------
 Clustering algorithms = Statistical methods used to group similar data points together based on their characteristics, often used in market segmentation and pattern recognition.
 ---------------------------------------------------------------------------------------------------
+Cointegrated = A statistical property of two or more time series variables that indicates a long-term equilibrium relationship, meaning that they move together over time despite short-term fluctuations.
+---------------------------------------------------------------------------------------------------
 Collateralised debt obligations (CDOs) = Financial instruments that pool together various types of debt, such as mortgages or loans, and divide them into tranches with different risk levels and returns for investors.
 ---------------------------------------------------------------------------------------------------
 Commodity = A basic good used in commerce that is interchangeable with other goods of the same type, such as gold, oil, or agricultural products.
