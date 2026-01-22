@@ -226,6 +226,8 @@ Cycle decomposition = The process of breaking down a time series into its consti
 ---------------------------------------------------------------------------------------------------
 Dark pool = A private financial forum or exchange for trading securities that is not accessible to the general public, allowing institutional investors to trade large blocks of shares without revealing their intentions to the broader market.
 ---------------------------------------------------------------------------------------------------
+Data-snooping bias = A statistical bias that occurs when a model is excessively fitted to historical data, leading to over-optimistic performance estimates that may not hold in out-of-sample testing.
+---------------------------------------------------------------------------------------------------
 Debt = An amount of money owed by one party to another, often incurred through borrowing or credit.
 ---------------------------------------------------------------------------------------------------
 Decimalization = The process of converting the pricing of securities from fractions to decimal format, which improves price transparency and market efficiency.
