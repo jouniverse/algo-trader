@@ -132,10 +132,10 @@ algo-trader/
 │   │   └── utils/            # Utilities (PyKX bridge)
 │   │
 │   ├── q/
-│   │   └── analytics/        # kdb+/q analytics
-│   │       ├── indicators.q  # Technical indicators
-│   │       └── performance.q # Performance metrics
-│   │
+│   │   ├── analytics/        # kdb+/q analytics
+│   │   │   ├── indicators.q  # Technical indicators
+│   │   │   └── performance.q # Performance metrics
+│   │   └── tick/             # Ticker plant (future)
 │   └── ui/                   # Web dashboard
 │
 ├── config/                   # Configuration files
