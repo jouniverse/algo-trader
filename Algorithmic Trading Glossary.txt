@@ -514,6 +514,8 @@ Live trading system = A fully operational trading platform that executes trades 
 ---------------------------------------------------------------------------------------------------
 Logistic regression = A statistical method used for modeling the probability of a binary outcome based on one or more predictor variables.
 ---------------------------------------------------------------------------------------------------
+Long = A trading position that involves buying a security with the expectation that its price will rise.
+---------------------------------------------------------------------------------------------------
 Long position = An investment strategy where an investor buys a security with the expectation that its price will rise, allowing them to sell it later at a profit.
 ---------------------------------------------------------------------------------------------------
 Long run = A period of time sufficient for all factors of production and costs to become variable, often used in economic and financial analysis to assess trends and performance over an extended timeframe.
@@ -845,6 +847,8 @@ Small-cap = Refers to companies with a small market capitalization, typically be
 Sortino ratio = A variation of the Sharpe ratio that only considers downside volatility, providing a better measure of risk-adjusted return for investors concerned about negative returns.
 ---------------------------------------------------------------------------------------------------
 S&P 500 = The Standard & Poor's 500 Index, a stock market index that measures the stock performance of 500 large companies listed on stock exchanges in the United States.
+---------------------------------------------------------------------------------------------------
+Short = Selling a security that the seller does not own, with the intention of buying it back later at a lower price to make a profit.
 ---------------------------------------------------------------------------------------------------
 Shorting = The practice of selling a security that the seller does not own, with the intention of buying it back later at a lower price to make a profit.
 ---------------------------------------------------------------------------------------------------
