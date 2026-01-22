@@ -414,6 +414,8 @@ Gamma = A measure of the rate of change of an option's Delta with respect to cha
  ---------------------------------------------------------------------------------------------------
 Gaussian = Relating to or having the characteristics of a normal distribution, often represented by a bell-shaped curve.
 ---------------------------------------------------------------------------------------------------
+Gaussian noise = Random variations or fluctuations in data that follow a normal distribution, often used in statistical modeling and signal processing.
+---------------------------------------------------------------------------------------------------
 General trader = A market participant who engages in buying and selling securities without specializing in a particular asset class or trading strategy.
 ---------------------------------------------------------------------------------------------------
 Gold standard = A monetary system in which a country's currency is directly linked to a specific amount of gold, allowing for the conversion of currency into gold at a fixed rate.
@@ -437,6 +439,8 @@ Heteroskedastic = A statistical property of a series where the variance of the e
 Heuristic = A practical approach or rule of thumb used to make decisions or solve problems, often based on experience rather than formal methods.
 ---------------------------------------------------------------------------------------------------
 HFT = See: High-frequency Trading
+---------------------------------------------------------------------------------------------------
+Hidden variable = A variable that is not directly observed but is inferred from other variables in a model, often used in statistical and machine learning models to capture underlying patterns.
 ---------------------------------------------------------------------------------------------------
 High-frequency Trading = A type of algorithmic trading that uses powerful computers to execute a large number of orders at extremely high speeds, often taking advantage of small price discrepancies.
 ---------------------------------------------------------------------------------------------------
@@ -663,6 +667,8 @@ Opening a position = The act of initiating a trade by buying or selling a securi
 Order book = A real-time electronic list of buy and sell orders for a specific security or asset, organized by price level.
 ---------------------------------------------------------------------------------------------------
 Quandl = A platform that provides access to a wide range of financial, economic, and alternative datasets for analysis and research.
+---------------------------------------------------------------------------------------------------
+Observable variable = A variable that can be directly measured or observed in a study or experiment, as opposed to a latent or hidden variable.
 ---------------------------------------------------------------------------------------------------
 Opportunistic trader = A trader who seeks to capitalize on short-term market inefficiencies or price movements, often using flexible strategies and quick decision-making.
 ---------------------------------------------------------------------------------------------------
