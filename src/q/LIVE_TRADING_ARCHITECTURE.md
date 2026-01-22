@@ -278,7 +278,7 @@ freezer/ticker-plant/    # Reference ticker plant implementation
 
 ## Summary
 
-The analytics app is **pure Python** for simplicity. When you're ready for live trading:
+The analytics app is **pure Python** for simplicity. When we move into live trading, we can leverage the kdb+/q components outlined here for high-performance data handling and real-time analytics:
 
 1. **Copy** ticker plant files from `freezer/ticker-plant/` to `src/q/tick/`
 2. **Start** kdb+ processes (TP, RDB, HDB)

@@ -110,6 +110,8 @@ Black Swan = An unpredictable and rare event that has significant consequences, 
 ---------------------------------------------------------------------------------------------------
 Blockchain = A decentralized digital ledger that records transactions across multiple computers in a way that ensures security, transparency, and immutability, often used in cryptocurrencies and other financial applications.
 ---------------------------------------------------------------------------------------------------
+Bloomberg = A global financial services company that provides real-time data, news, analytics, and trading platforms to financial professionals.
+---------------------------------------------------------------------------------------------------
 Bollinger bands strategy = A trading strategy that uses Bollinger Bands, which are volatility bands placed above and below a moving average, to identify potential buy and sell signals.
 ---------------------------------------------------------------------------------------------------
 Bond = A fixed-income security that represents a loan made by an investor to a borrower, typically corporate or governmental, which pays periodic interest and returns the principal at maturity.
@@ -143,6 +145,8 @@ Calendar day = A standard day in the calendar, including weekends and holidays, 
 Calmar ratio = A risk-adjusted performance metric that compares the annualized return of an investment to its maximum drawdown.
 ---------------------------------------------------------------------------------------------------
 Cancel = The action of withdrawing or nullifying a previously placed order in the market before it is executed.
+---------------------------------------------------------------------------------------------------
+Capex = Capital expenditures, which are funds used by a company to acquire, upgrade, and maintain physical assets such as property, buildings, or equipment.
 ---------------------------------------------------------------------------------------------------
 Capital = Financial assets or resources available for investment or trading.
 ---------------------------------------------------------------------------------------------------
@@ -205,6 +209,8 @@ Correlation of defaults = A measure of the likelihood that multiple borrowers wi
 Counter-intuitive distributions = Statistical distributions that exhibit unexpected or non-standard properties, often challenging traditional assumptions in financial modeling and risk assessment.
 ---------------------------------------------------------------------------------------------------
 Covariance = A statistical measure that indicates the extent to which two variables change together, used to assess the relationship between asset returns in portfolio management.
+---------------------------------------------------------------------------------------------------
+Covariance matrix = A square matrix that contains the covariances between pairs of variables, often used in finance to analyze the relationships between multiple asset returns.
 ---------------------------------------------------------------------------------------------------
 CPI = See: Consumer Price Index
 ---------------------------------------------------------------------------------------------------
@@ -430,6 +436,8 @@ Generalized linear models = A broad class of statistical models that extend line
 ---------------------------------------------------------------------------------------------------
 "Greeks" = A set of risk measures used in options trading to assess the sensitivity of an option's price to various factors, including Delta, Gamma, Theta, Vega, and Rho.
 ---------------------------------------------------------------------------------------------------
+Hawkish = A monetary policy stance characterized by a focus on controlling inflation, often through higher interest rates, which can lead to reduced economic growth.
+---------------------------------------------------------------------------------------------------
 Hedge fund = A pooled investment fund that employs various strategies to earn active returns for its investors, often using leverage, derivatives, and short selling.
 ---------------------------------------------------------------------------------------------------
 Hedge ratio = The ratio used to determine the size of a hedge position relative to the size of the exposure being hedged, often calculated as the value of the hedging instrument divided by the value of the underlying asset.
@@ -480,6 +488,8 @@ Intraday trading = The practice of buying and selling financial instruments with
 ---------------------------------------------------------------------------------------------------
 Invisible hand = A concept introduced by economist Adam Smith, suggesting that individuals pursuing their own self-interest in a free market can lead to positive outcomes for society as a whole through the unintended consequences of their actions.
 ---------------------------------------------------------------------------------------------------
+I-star cost = A measure of the total cost incurred in executing a trade, including explicit costs such as commissions and fees, as well as implicit costs like market impact and opportunity costs.
+---------------------------------------------------------------------------------------------------
 Itô calculus = A branch of mathematics that deals with stochastic processes and is used to model random movements in financial markets, particularly in the pricing of derivatives.
 ---------------------------------------------------------------------------------------------------
 Jump-diffusion model = A mathematical model used to describe asset price movements that incorporate both continuous diffusion and sudden jumps, often applied in option pricing and risk management.
@@ -527,6 +537,8 @@ Liquidity = The ease with which an asset can be bought or sold in the market wit
 Live trading system = A fully operational trading platform that executes trades in real-time using actual capital, as opposed to simulated or paper trading environments.
 ---------------------------------------------------------------------------------------------------
 Logistic regression = A statistical method used for modeling the probability of a binary outcome based on one or more predictor variables.
+---------------------------------------------------------------------------------------------------
+London City = The primary financial district in London, known for its concentration of banks, investment firms, and other financial institutions.
 ---------------------------------------------------------------------------------------------------
 Long = A trading position that involves buying a security with the expectation that its price will rise.
 ---------------------------------------------------------------------------------------------------
@@ -626,6 +638,8 @@ Nash equilibrium = A concept in game theory where no player can benefit by chang
 ---------------------------------------------------------------------------------------------------
 Natural language processing (NLP) = A field of artificial intelligence that focuses on the interaction between computers and human language, enabling machines to understand, interpret, and generate human language in a meaningful way.
 ---------------------------------------------------------------------------------------------------
+Navier-Stokes = A set of partial differential equations that describe the motion of fluid substances, often used in physics and engineering to model fluid dynamics. They are increasingly adapted for financial modeling to capture market dynamics like liquidity flows, systemic risk, and turbulence, treating capital as a fluid.
+---------------------------------------------------------------------------------------------------
 NBBO = National Best Bid and Offer, the highest bid price and lowest ask price available across all exchanges for a particular security.
 ---------------------------------------------------------------------------------------------------
 Neural network (NN) = A computational model inspired by the structure and function of the human brain, consisting of interconnected nodes (neurons) that process information and learn patterns from data.
@@ -713,6 +727,8 @@ Pattern recognition = The process of identifying and classifying patterns in dat
 PCA = See: Principal Component Analysis
 ---------------------------------------------------------------------------------------------------
 PE ratio = The price-to-earnings ratio, a valuation metric that compares a company's current share price to its per-share earnings, used to assess whether a stock is overvalued or undervalued.
+---------------------------------------------------------------------------------------------------
+Penny jumping = A trading strategy that involves placing buy or sell orders just one cent above or below the current best bid or ask price to gain priority in order execution.
 ---------------------------------------------------------------------------------------------------
 Performance metric = A quantitative measure used to evaluate the effectiveness and success of a trading strategy or investment, such as return, Sharpe ratio, or maximum drawdown.
 ---------------------------------------------------------------------------------------------------
@@ -842,6 +858,8 @@ Securities and Exchange Commission = A U.S. government agency responsible for re
 ---------------------------------------------------------------------------------------------------
 Securities Trading = The buying and selling of financial instruments in various markets, including stock exchanges and over-the-counter markets.
 ---------------------------------------------------------------------------------------------------
+Selection risk = The risk associated with the selection of specific securities or assets in a portfolio, which may lead to underperformance compared to a benchmark or market index.
+---------------------------------------------------------------------------------------------------
 Sensitivity analysis = The study of how the variation in the output of a model can be attributed to different variations in the inputs, often used in financial modeling to assess the impact of changes in key variables on investment outcomes.
 ---------------------------------------------------------------------------------------------------
 Sentiment analysis = The use of natural language processing and computational techniques to analyze and quantify the sentiment or emotional tone of textual data, often used in financial markets to gauge investor sentiment.
@@ -882,6 +900,10 @@ Sliding window approach = A method used in time series analysis and machine lear
 ---------------------------------------------------------------------------------------------------
 Sniping = A high-frequency trading strategy that involves placing rapid buy or sell orders to capitalize on small price movements before other market participants can react.
 ---------------------------------------------------------------------------------------------------
+SOES = Small Order Execution System, an electronic trading system used by market makers to execute small orders quickly and efficiently.
+---------------------------------------------------------------------------------------------------
+SOES bandits = Traders who exploit the Small Order Execution System (SOES) to quickly execute small orders and profit from short-term price movements, often using automated trading strategies.
+---------------------------------------------------------------------------------------------------
 Sovereign debt = Debt issued by a national government, typically in the form of bonds, to finance public spending and obligations.
 ---------------------------------------------------------------------------------------------------
 Sovereign wealth fund = A state-owned investment fund that manages a country's reserves, typically derived from surplus revenues, to achieve long-term financial objectives.
@@ -911,6 +933,8 @@ Stochastic process = A collection of random variables representing the evolution
 Stock = A type of security that represents ownership in a corporation and entitles the shareholder to a portion of the company's profits.
 ---------------------------------------------------------------------------------------------------
 Stock Exchange = A marketplace where stocks and other securities are bought and sold, such as the New York Stock Exchange (NYSE) or NASDAQ.
+---------------------------------------------------------------------------------------------------
+Stock trading cost curve = A graphical representation of the relationship between the size of a trade and the associated transaction costs, often used to optimize trade execution strategies.
 ---------------------------------------------------------------------------------------------------
 Stop-loss level = A predetermined price level at which a trader will exit a losing position to limit potential losses.
 ---------------------------------------------------------------------------------------------------
@@ -972,6 +996,8 @@ Time value of money = The concept that money available today is worth more than 
 ---------------------------------------------------------------------------------------------------
 Total return = The overall percentage gain or loss of a trading strategy over a specified period.
 ---------------------------------------------------------------------------------------------------
+Toxic liquidity = Liquidity that is associated with high levels of adverse selection risk, often provided by traders who possess superior information and can exploit less informed market participants.
+---------------------------------------------------------------------------------------------------
 Trade = The act of buying or selling a financial instrument in the market.
 ---------------------------------------------------------------------------------------------------
 Trading day = A standard business day during which financial markets are open for trading activities.
@@ -1002,6 +1028,8 @@ Trend following strategy = A trading strategy that seeks to capitalize on the mo
 Triple EMA indicator = An indicator that uses three Exponential Moving Averages (EMAs) to provide a more refined analysis of price trends and reduce lag compared to single or double EMAs.
 ---------------------------------------------------------------------------------------------------
 Tulip mania = A period in the 17th century during which the prices of tulip bulbs in the Netherlands reached extraordinarily high levels before collapsing, often cited as one of the first recorded speculative bubbles. Not unlike current cryptocurrency craze.
+---------------------------------------------------------------------------------------------------
+Turbulence = A state of chaotic and unpredictable market conditions characterized by high volatility, rapid price movements, and increased uncertainty, often leading to challenges in trading and risk management.
 ---------------------------------------------------------------------------------------------------
 Turner Review = A report published in 2009 by the UK Financial Services Authority, authored by Adair Turner, that analyzed the causes of the global financial crisis and proposed regulatory reforms to enhance financial stability.
 ---------------------------------------------------------------------------------------------------
@@ -1036,6 +1064,8 @@ Volume = The total number of shares or contracts traded for a specific security 
 VWAP = Volume Weighted Average Price, a trading benchmark that calculates the average price of a security based on both volume and price over a specified period.
 ---------------------------------------------------------------------------------------------------
 Walk forward = A method of testing a trading strategy by repeatedly training the model on a rolling window of historical data and testing it on the subsequent out-of-sample data.
+---------------------------------------------------------------------------------------------------
+Wall Street = A term commonly used to refer to the financial markets and institutions in the United States, particularly those located in New York City, symbolizing the heart of the country's financial industry.
 ---------------------------------------------------------------------------------------------------
 Wavelets = Mathematical functions used to divide a given function or continuous-time signal into different scale components, often applied in financial time series analysis for denoising and feature extraction.
 ---------------------------------------------------------------------------------------------------
