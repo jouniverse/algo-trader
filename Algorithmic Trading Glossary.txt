@@ -658,6 +658,8 @@ Obligation = A legal or financial commitment to perform a specific action, such 
 ---------------------------------------------------------------------------------------------------
 Offsetting = The practice of entering into a trade that counteracts an existing position, effectively closing it out and realizing any gains or losses.
 ---------------------------------------------------------------------------------------------------
+OHLC = An acronym for Open, High, Low, Close; a type of financial chart that displays the open, high, low, and closing prices of a security for a specific time period.
+---------------------------------------------------------------------------------------------------
 OLS = See: Ordinary least squares
 ---------------------------------------------------------------------------------------------------
 Opening price = The price at which a security first trades upon the opening of an exchange on a given trading day.
