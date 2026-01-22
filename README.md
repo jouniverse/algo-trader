@@ -4,6 +4,8 @@
 
 A modular platform for developing, backtesting, and analyzing algorithmic trading strategies. Focuses on high-performance time-series analytics using kdb+/q with Python for data fetching and complex algorithms.
 
+Paper and live trading support planned.
+
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.10+-green.svg)
 ![kdb+/q](https://img.shields.io/badge/kdb%2B-community-orange.svg)
