@@ -277,8 +277,14 @@ Double EMA indicator = An indicator that uses two Exponential Moving Averages (E
 Dow Jones Industrial Average = A stock market index that measures the stock performance of 30 large, publicly-owned companies listed on stock exchanges in the United States.
 ---------------------------------------------------------------------------------------------------
 "Dow Theory" = A financial theory that suggests that the stock market moves in predictable trends and that these trends can be identified through the analysis of market indices, particularly the Dow Jones Industrial Average and the Dow Jones Transportation Average.
+--------------------------------------------------------------------------------------------------- 
+Drawdown = A measure of the decline in the value of an investment or trading strategy from its peak to its trough, often expressed as a percentage.
+---------------------------------------------------------------------------------------------------
+Drift = A consistent, long-term trend in the price movement of a financial asset, often influenced by factors such as economic growth, inflation, and market sentiment.
 ---------------------------------------------------------------------------------------------------
 DSP = Digital Signal Processing, a field of study that focuses on the analysis and manipulation of signals, often used in financial markets to process and analyze time series data for trading strategies.
+---------------------------------------------------------------------------------------------------
+Dual moving average crossover = A trading strategy that uses two moving averages of different lengths to generate buy and sell signals based on their crossover points.
 ---------------------------------------------------------------------------------------------------
 Durbin-Watson = A statistical test used to detect the presence of autocorrelation in the residuals of a regression analysis.
 ---------------------------------------------------------------------------------------------------
