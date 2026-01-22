@@ -850,6 +850,8 @@ SMA = See: Simple moving average
 ---------------------------------------------------------------------------------------------------
 Small-cap = Refers to companies with a small market capitalization, typically between $300 million and $2 billion, which are considered to have higher growth potential but also higher risk.
 ---------------------------------------------------------------------------------------------------
+SNR = Signal-to-noise ratio, a measure used to quantify the amount of useful information (signal) relative to the amount of irrelevant or random data (noise) in a dataset.
+---------------------------------------------------------------------------------------------------
 Sortino ratio = A variation of the Sharpe ratio that only considers downside volatility, providing a better measure of risk-adjusted return for investors concerned about negative returns.
 ---------------------------------------------------------------------------------------------------
 S&P 500 = The Standard & Poor's 500 Index, a stock market index that measures the stock performance of 500 large companies listed on stock exchanges in the United States.
