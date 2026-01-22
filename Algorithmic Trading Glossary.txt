@@ -4,6 +4,8 @@
 ---------------------------------------------------------------------------------------------------
 Active manager = An investment manager who actively makes decisions about buying and selling securities in an attempt to outperform a specific benchmark or index.
 ---------------------------------------------------------------------------------------------------
+Active strategy = A trading approach that involves actively making decisions about buying and selling securities based on market analysis, trends, and other factors, with the goal of generating higher returns than a passive strategy.
+---------------------------------------------------------------------------------------------------
 ADX = See: Average directional index
 ---------------------------------------------------------------------------------------------------
 AI agent = An artificial intelligence system that can perceive its environment, make decisions, and take actions to achieve specific goals, often used in algorithmic trading to automate decision-making processes.
@@ -683,6 +685,8 @@ Paper-trading simulation = A simulated trading environment that allows traders t
 Parabolic SAR = A technical analysis indicator used to determine the direction of an asset's momentum and the point in time when this momentum has a higher-than-normal probability of switching directions.
 ---------------------------------------------------------------------------------------------------
 Parameter tuning = The process of optimizing the parameters of a model or algorithm to improve its performance, often through techniques such as grid search, random search, or Bayesian optimization.
+---------------------------------------------------------------------------------------------------
+Passive strategy = An investment approach that aims to replicate the performance of a specific market index or benchmark, typically through buy-and-hold strategies and minimal trading activity.
 ---------------------------------------------------------------------------------------------------
 Pattern recognition = The process of identifying and classifying patterns in data, often used in financial markets to detect trends and make trading decisions.
 ---------------------------------------------------------------------------------------------------
