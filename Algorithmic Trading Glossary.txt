@@ -128,7 +128,7 @@ Bootstrapping = A statistical method used to estimate the distribution of a samp
 ---------------------------------------------------------------------------------------------------
 Brady report = A report published in 1988 by the Brady Commission, which investigated the causes of the 1987 stock market crash and provided recommendations to improve market stability and investor confidence.
 ---------------------------------------------------------------------------------------------------
-Broker = A financial intermediary that facilitates the buying and selling of securities on behalf of clients.
+Broker = A financial intermediary that facilitates the buying and selling of securities on behalf of clients. Hopefully not someone who makes you broke
 ---------------------------------------------------------------------------------------------------
 Broker fees = The costs associated with executing trades through a brokerage, which can include commissions, spreads, and other transaction fees.
 ---------------------------------------------------------------------------------------------------
@@ -1105,7 +1105,7 @@ Wealth allocation = The process of distributing investment capital across variou
 ---------------------------------------------------------------------------------------------------
 Weighted moving average (WMA) = A type of moving average that assigns different weights to data points, typically giving more importance to recent prices.
 ---------------------------------------------------------------------------------------------------
-Win = A trade that results in a profit for the trader.
+Win = A trade that results in a profit for the trader. Not to be confused with Windows, an operating system developed by Microsoft.
 ---------------------------------------------------------------------------------------------------
 Win rate = The percentage of trades that result in a profit out of the total number of trades executed.
 ---------------------------------------------------------------------------------------------------
