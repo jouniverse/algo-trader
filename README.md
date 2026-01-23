@@ -68,6 +68,8 @@ cp config/.env.example config/.env
 # Edit config/.env with your API keys
 ```
 
+**NOTE**: Add a file `./config/API_KEYS.txt` with your API keys if needed. Currently only FRED API key is required for economic data.
+
 ### Running the Application
 
 **Start the API server:**
@@ -87,8 +89,6 @@ python -m http.server 3000 --directory src/ui
 ```
 
 Navigate to `http://localhost:3000`
-
-**NOTE**: Add a file `./config/API_KEYS.txt` with your API keys if needed. Currently only FRED API key is required for economic data.
 
 ---
 
