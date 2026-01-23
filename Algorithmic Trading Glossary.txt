@@ -54,11 +54,17 @@ Ask = The lowest price a seller is willing to accept for a security or asset.
 ---------------------------------------------------------------------------------------------------
 Ask/Bid spread = The difference between the ask price and the bid price of a security or asset, representing the transaction cost for traders.
 ---------------------------------------------------------------------------------------------------
+Asset = Anything of value that is owned by an individual or organization, including stocks, bonds, real estate, and commodities.
+---------------------------------------------------------------------------------------------------
+Asset management = The professional management of various securities and assets to meet specified investment goals for the benefit of investors.
+---------------------------------------------------------------------------------------------------
 Asymmetric information = A situation in which one party in a transaction has more or better information than the other party, often leading to market inefficiencies.
 ---------------------------------------------------------------------------------------------------
 Auction-based trading = A trading mechanism where buyers and sellers submit bids and offers during specific time intervals, and trades are executed at a single clearing price determined by the highest bid and lowest ask.
 ---------------------------------------------------------------------------------------------------
 Auction theory = A branch of economics that studies how auction designs and rules affect the behavior of bidders and the outcomes of auctions.
+---------------------------------------------------------------------------------------------------
+AUM = Assets Under Management, the total market value of assets that an investment company or financial institution manages on behalf of clients.
 ---------------------------------------------------------------------------------------------------
 Autocorrelation = A statistical measure that indicates the degree of similarity between a given time series and a lagged version of itself over successive time intervals.
 ---------------------------------------------------------------------------------------------------
@@ -117,6 +123,8 @@ Bollinger bands strategy = A trading strategy that uses Bollinger Bands, which a
 Bond = A fixed-income security that represents a loan made by an investor to a borrower, typically corporate or governmental, which pays periodic interest and returns the principal at maturity.
 ---------------------------------------------------------------------------------------------------
 Book value = The net asset value of a company, calculated as total assets minus total liabilities, representing the value of the company if it were to be liquidated.
+---------------------------------------------------------------------------------------------------
+Bootstrapping = A statistical method used to estimate the distribution of a sample statistic by resampling with replacement from the original data, often used in finance to assess the uncertainty of model parameters.
 ---------------------------------------------------------------------------------------------------
 Brady report = A report published in 1988 by the Brady Commission, which investigated the causes of the 1987 stock market crash and provided recommendations to improve market stability and investor confidence.
 ---------------------------------------------------------------------------------------------------
@@ -818,6 +826,8 @@ Rational expectation hypothesis = An economic theory that suggests individuals m
 ---------------------------------------------------------------------------------------------------
 Rebalancing = The process of realigning the weightings of a portfolio of assets to maintain a desired level of asset allocation and risk.
 ---------------------------------------------------------------------------------------------------
+Rebound effect = The phenomenon where improvements in efficiency lead to increased consumption, potentially offsetting the intended benefits of the efficiency gains.
+---------------------------------------------------------------------------------------------------
 REIT = Real Estate Investment Trust, a company that owns, operates, or finances income-generating real estate, allowing investors to pool their money to invest in large-scale real estate projects.
 ---------------------------------------------------------------------------------------------------
 Reg NMS = A set of regulations implemented by the U.S. Securities and Exchange Commission (SEC) to modernize and strengthen the national market system for equity securities, promoting fair competition and investor protection.
@@ -833,6 +843,8 @@ Residuals = The differences between observed values and the values predicted by 
 Return on wealth (r) = The percentage change in the value of an investment or portfolio over a specified period, reflecting the overall profitability of the investment.
 ---------------------------------------------------------------------------------------------------
 Revenue = The total income generated from trading activities before deducting any expenses or costs.
+---------------------------------------------------------------------------------------------------
+Risk aversion = The tendency of investors to prefer lower-risk investments and avoid uncertainty, often leading to a preference for safer assets with lower potential returns.
 ---------------------------------------------------------------------------------------------------
 Shortfall = The financial loss incurred from a trading activity when the costs exceed the revenues generated.
 ---------------------------------------------------------------------------------------------------
@@ -859,6 +871,8 @@ RSI strategy = A trading strategy based on the Relative Strength Index (RSI) ind
 R-squared = A statistical measure that represents the proportion of the variance for a dependent variable that's explained by an independent variable or variables in a regression model.
 ---------------------------------------------------------------------------------------------------
 Safe return = An investment return that is considered low risk, often associated with government bonds or other stable financial instruments.
+---------------------------------------------------------------------------------------------------
+Sample = A subset of data selected from a larger population, used for analysis and inference about the population.
 ---------------------------------------------------------------------------------------------------
 Scalping = A short-term trading strategy that involves making numerous trades throughout the day to profit from small price movements.
 ---------------------------------------------------------------------------------------------------
@@ -959,6 +973,8 @@ Strategy = A systematic plan or method used to achieve a specific financial goal
 Subprime crisis = A financial crisis that occurred in 2007-2008, triggered by a collapse in the subprime mortgage market in the United States, leading to widespread defaults, bank failures, and a global economic downturn.
 ---------------------------------------------------------------------------------------------------
 Supply = The total amount of a specific good or service that is available to consumers in the market.
+---------------------------------------------------------------------------------------------------
+Supply crunch = A sudden and significant reduction in the availability of a particular good or service, often leading to increased prices and market volatility.
 ---------------------------------------------------------------------------------------------------
 Support vector machine (SVM) = A supervised machine learning algorithm used for classification and regression tasks, which finds the optimal hyperplane that separates different classes in the feature space.
 ---------------------------------------------------------------------------------------------------
