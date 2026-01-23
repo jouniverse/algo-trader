@@ -992,6 +992,8 @@ Swing Trading = A trading strategy that aims to capture short- to medium-term pr
 ---------------------------------------------------------------------------------------------------
 SWIFT system = The Society for Worldwide Interbank Financial Telecommunication (SWIFT) system is a global messaging network used by financial institutions to securely transmit information and instructions related to financial transactions.
 ---------------------------------------------------------------------------------------------------
+Synthetic derivative = A financial instrument that is created by combining two or more existing securities or derivatives to replicate the payoff of another asset, often used for hedging or speculative purposes.
+---------------------------------------------------------------------------------------------------
 Systemic instability = A condition in financial markets where interconnectedness and interdependencies among institutions or assets lead to increased vulnerability to shocks, potentially resulting in widespread market disruptions. For example in algorithmic trading widespread use of similar algorithms can amplify market volatility and contribute to flash crashes.
 ---------------------------------------------------------------------------------------------------
 Systemic risk = The risk of collapse or significant disruption in the entire financial system or market, often due to the interconnectedness of institutions and markets, which can lead to widespread economic consequences.
