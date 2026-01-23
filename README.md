@@ -47,7 +47,7 @@ In the long rung the average expected return on wealth (r) is  around ~6% and th
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/algo-trader.git
+git clone https://github.com/jouniverse/algo-trader.git
 cd algo-trader
 ```
 
