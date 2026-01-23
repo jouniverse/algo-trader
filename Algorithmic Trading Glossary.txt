@@ -952,7 +952,7 @@ Stationarity = A property of a time series where its statistical properties, suc
 ---------------------------------------------------------------------------------------------------
 Statistical arbitrage = A trading strategy that uses statistical and mathematical models to identify and exploit pricing inefficiencies between related financial instruments.
 ---------------------------------------------------------------------------------------------------
-Stochastic = A type of oscillator used in technical analysis to compare a particular closing price of a security to a range of its prices over a certain period.
+Stochastic = Involving a random variable or process, often used to describe systems or models that incorporate elements of randomness or uncertainty.
 ---------------------------------------------------------------------------------------------------
 Stochastic differential equations = Mathematical equations that describe the behavior of systems influenced by random variables, often used in financial modeling to represent the dynamics of asset prices and interest rates.
 ---------------------------------------------------------------------------------------------------
