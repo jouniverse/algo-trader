@@ -1,5 +1,7 @@
 // Glossary of trading terminology for algorithmic traders
 ---------------------------------------------------------------------------------------------------
+100% Profitable Martingale Strategy = A trading strategy that involves doubling the position size after each loss, with the aim of recovering all previous losses and making a profit when a winning trade eventually occurs. Note: This strategy carries significant risk and can lead to substantial losses.
+---------------------------------------------------------------------------------------------------
 1987 crash = A significant stock market crash that occurred on October 19, 1987, also known as "Black Monday," when stock markets around the world experienced a sudden and severe decline in value.
 ---------------------------------------------------------------------------------------------------
 Active manager = An investment manager who actively makes decisions about buying and selling securities in an attempt to outperform a specific benchmark or index.
@@ -92,6 +94,12 @@ Bayesian optimization = A statistical technique used to optimize complex functio
 ---------------------------------------------------------------------------------------------------
 Bearish = A market sentiment characterized by falling prices and pessimism about future market performance.
 ---------------------------------------------------------------------------------------------------
+Bear market = A market condition characterized by a prolonged period of declining prices, often defined as a drop of 20% or more from recent highs.
+---------------------------------------------------------------------------------------------------
+Beat the house = To achieve investment returns that consistently outperform the average market returns, similar to how a gambler aims to win against the odds set by a casino.
+---------------------------------------------------------------------------------------------------
+Beat the market = To achieve investment returns that exceed the performance of a specific benchmark or index.
+---------------------------------------------------------------------------------------------------
 Behavioral finance = A field of study that combines psychology and economics to understand how cognitive biases and emotional factors influence financial decision-making and market behavior.
 ---------------------------------------------------------------------------------------------------
 Benchmark = A standard or point of reference against which the performance of a security, portfolio, or investment manager can be measured.
@@ -141,6 +149,8 @@ Bubble = A market condition characterized by rapid and unsustainable price incre
 Bullion = Physical precious metals, such as gold or silver, typically in the form of bars or coins, used for investment or as a store of value.
 ---------------------------------------------------------------------------------------------------
 Bullish = A market sentiment characterized by rising prices and optimism about future market performance.
+---------------------------------------------------------------------------------------------------
+Bull market = A market condition characterized by a prolonged period of rising prices, often driven by strong investor confidence and economic growth.
 ---------------------------------------------------------------------------------------------------
 Bull run = A sustained period of rising prices in the stock market or a specific asset class, often driven by positive investor sentiment and economic growth.
 ---------------------------------------------------------------------------------------------------
@@ -314,7 +324,7 @@ ECM = See: Error Correction Models
 ---------------------------------------------------------------------------------------------------
 Economic growth (g) = The increase in the inflation-adjusted market value of the goods and services produced by an economy over time, often measured as the percentage increase in real gross domestic product (GDP).
 ---------------------------------------------------------------------------------------------------
-Edge = A competitive advantage or unique characteristic of a trading strategy that allows it to generate consistent profits over time.
+Edge = A competitive advantage or unique characteristic of a trading strategy that allows it to generate consistent profits over time. You don't have to know Bono to find the edge.
 ---------------------------------------------------------------------------------------------------
 Edge ratio = A performance metric that compares the average profit of winning trades to the average loss of losing trades in a trading strategy.
 ---------------------------------------------------------------------------------------------------
@@ -602,6 +612,8 @@ Market microstructure = The study of the processes and mechanisms through which 
 ---------------------------------------------------------------------------------------------------
 Market value = The total worth of a company's outstanding shares of stock, calculated by multiplying the current market price per share by the total number of outstanding shares.
 ---------------------------------------------------------------------------------------------------
+Martingale = A mathematical model of a fair game where future predictions are based solely on the present value, with no regard for past values. In finance, it implies that asset prices follow a random walk and that it is impossible to consistently achieve higher returns than the overall market. It is also a high-risk betting strategy where a gambler doubles their bet after every loss to recover previous losses and gain a profit equal to the original stake.
+---------------------------------------------------------------------------------------------------
 Mark-to-market = The practice of valuing an asset or portfolio based on its current market price, rather than its historical cost or book value.
 ---------------------------------------------------------------------------------------------------
 Max drawdown = The maximum observed loss from a peak to a trough of a portfolio, before a new peak is attained. It is an important risk metric for traders.
@@ -615,6 +627,8 @@ Mean reversion = A financial theory suggesting that asset prices and historical 
 Mean‑field game = A mathematical framework used to analyze strategic decision-making in large populations of small interacting agents, often applied in economics and finance to model market behavior.
 ---------------------------------------------------------------------------------------------------
 Mean reversion strategy = A trading strategy that assumes that asset prices will revert to their historical average over time, leading to buy signals when prices are low and sell signals when prices are high.
+---------------------------------------------------------------------------------------------------
+Mid price = The average of the best bid and best ask prices for a security, often used as a reference point for trade execution.
 ---------------------------------------------------------------------------------------------------
 MiFID II = The Markets in Financial Instruments Directive II, a regulatory framework implemented by the European Union to increase transparency and investor protection in financial markets.
 ---------------------------------------------------------------------------------------------------
@@ -648,7 +662,7 @@ Narconomics = The application of economic theories and principles to understand 
 ---------------------------------------------------------------------------------------------------
 NASDAQ100 = A stock market index that includes 100 of the largest non-financial companies listed on the NASDAQ stock exchange.
 ---------------------------------------------------------------------------------------------------
-Nash equilibrium = A concept in game theory where no player can benefit by changing their strategy while the other players keep theirs unchanged, indicating a stable state of strategic interaction. E.g the state where no trader wants to change strategy given others’ choices.
+Nash equilibrium = A concept in game theory where no player can benefit by changing their strategy while the other players keep theirs unchanged, indicating a stable state of strategic interaction. E.g the state where no trader wants to change strategy given others’ choices. This has nothing to do with the Country Music Hall of Fame.
 ---------------------------------------------------------------------------------------------------
 Natural language processing (NLP) = A field of artificial intelligence that focuses on the interaction between computers and human language, enabling machines to understand, interpret, and generate human language in a meaningful way.
 ---------------------------------------------------------------------------------------------------
@@ -698,8 +712,6 @@ Opening a position = The act of initiating a trade by buying or selling a securi
 ---------------------------------------------------------------------------------------------------
 Order book = A real-time electronic list of buy and sell orders for a specific security or asset, organized by price level.
 ---------------------------------------------------------------------------------------------------
-Quandl = A platform that provides access to a wide range of financial, economic, and alternative datasets for analysis and research.
----------------------------------------------------------------------------------------------------
 Observable variable = A variable that can be directly measured or observed in a study or experiment, as opposed to a latent or hidden variable.
 ---------------------------------------------------------------------------------------------------
 Opportunistic trader = A trader who seeks to capitalize on short-term market inefficiencies or price movements, often using flexible strategies and quick decision-making.
@@ -717,6 +729,8 @@ Order-to-trade ratio = A metric that measures the number of orders placed relati
 Ordinary Least Squares = A method for estimating the parameters in a linear regression model by minimizing the sum of the squared differences between observed and predicted values.
 ---------------------------------------------------------------------------------------------------
 Ornstein-Uhlenbeck process = A type of stochastic process that describes the velocity of a massive Brownian particle under the influence of friction, often used in financial modeling to represent mean-reverting behavior in asset prices.
+---------------------------------------------------------------------------------------------------
+OTC = Over-the-counter, referring to the trading of financial instruments directly between two parties without the involvement of a centralized exchange.
 ---------------------------------------------------------------------------------------------------
 Outlier = An observation in a dataset that deviates significantly from other observations, potentially indicating variability in measurement, experimental errors, or novel phenomena.
 ---------------------------------------------------------------------------------------------------
@@ -797,6 +811,8 @@ Pulldown/Pullback Strategy = A trading strategy that aims to capitalize on tempo
 p-value = A statistical measure that helps determine the significance of results obtained from hypothesis testing, indicating the probability of observing the data if the null hypothesis is true.
 ---------------------------------------------------------------------------------------------------
 Quadratic programming = A type of mathematical optimization problem where the objective function is quadratic and the constraints are linear, often used in portfolio optimization to minimize risk while maximizing returns.
+---------------------------------------------------------------------------------------------------
+Quandl = A platform that provides access to a wide range of financial, economic, and alternative datasets for analysis and research.
 ---------------------------------------------------------------------------------------------------
 Quant = A quantitative analyst who uses mathematical models and statistical techniques to analyze financial markets and develop trading strategies. Not to be confused with the Quandt family, which is a wealthy German dynasty known for their ownership of BMW.
 ---------------------------------------------------------------------------------------------------
@@ -971,6 +987,10 @@ Stop-loss level = A predetermined price level at which a trader will exit a losi
 Strategy = A systematic plan or method used to achieve a specific financial goal, often involving a set of rules for entering and exiting trades in the market.
 ---------------------------------------------------------------------------------------------------
 Subprime crisis = A financial crisis that occurred in 2007-2008, triggered by a collapse in the subprime mortgage market in the United States, leading to widespread defaults, bank failures, and a global economic downturn.
+---------------------------------------------------------------------------------------------------
+Supermarket = A place to buy groceries and other household items. Not to be confused with "supermartingale," which is a concept in probability theory and finance.
+---------------------------------------------------------------------------------------------------
+Supermartingale = A stochastic process that, on average, does not increase in value over time, often used in the context of gambling and financial modeling to describe fair games or investments.
 ---------------------------------------------------------------------------------------------------
 Supply = The total amount of a specific good or service that is available to consumers in the market.
 ---------------------------------------------------------------------------------------------------
