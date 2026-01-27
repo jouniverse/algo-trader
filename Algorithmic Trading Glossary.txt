@@ -67,6 +67,8 @@ Auction-based trading = A trading mechanism where buyers and sellers submit bids
 Auction theory = A branch of economics that studies how auction designs and rules affect the behavior of bidders and the outcomes of auctions.
 ---------------------------------------------------------------------------------------------------
 AUM = Assets Under Management, the total market value of assets that an investment company or financial institution manages on behalf of clients.
+
+Autism = A developmental disorder characterized by difficulties with social interaction, communication, and repetitive behaviors. Autistic persons are sometimes associated with uncanny and very narrow mathematical skills, but this is very rare. Microsoft has often targeted and recruited autistic people for low-level programming jobs, but the development of AI has made many of these task-based jobs obsolete.
 ---------------------------------------------------------------------------------------------------
 Autocorrelation = A statistical measure that indicates the degree of similarity between a given time series and a lagged version of itself over successive time intervals.
 ---------------------------------------------------------------------------------------------------
@@ -253,6 +255,8 @@ Cycle = A recurring pattern or trend in market data that repeats over a specific
 Cycle decomposition = The process of breaking down a time series into its constituent cycles to analyze and understand the underlying patterns and trends in the data.
 ---------------------------------------------------------------------------------------------------
 Dark pool = A private financial forum or exchange for trading securities that is not accessible to the general public, allowing institutional investors to trade large blocks of shares without revealing their intentions to the broader market.
+---------------------------------------------------------------------------------------------------
+Data broker = An entity that collects, aggregates, and sells data, often including personal or financial information, to other businesses or individuals for various purposes, including marketing and analytics.
 ---------------------------------------------------------------------------------------------------
 Data-snooping bias = A statistical bias that occurs when a model is excessively fitted to historical data, leading to over-optimistic performance estimates that may not hold in out-of-sample testing.
 ---------------------------------------------------------------------------------------------------
@@ -648,6 +652,8 @@ Momentum strategy = A trading strategy that aims to capitalize on the continuanc
 ---------------------------------------------------------------------------------------------------
 Monte-Carlo simulation = A statistical technique used to model the probability of different outcomes in a process that cannot easily be predicted due to the intervention of random variables.
 ---------------------------------------------------------------------------------------------------
+Moose = An animal that lives in the forest.
+---------------------------------------------------------------------------------------------------
 Multicollinearity = A statistical phenomenon in which two or more independent variables in a regression model are highly correlated, making it difficult to isolate the individual effect of each variable.
 ---------------------------------------------------------------------------------------------------
 Multicollinearity reduction module (MRM) = A computational tool or algorithm designed to identify and mitigate the effects of multicollinearity in regression models, often by removing or combining correlated variables.
@@ -1027,6 +1033,8 @@ TCA = See: Transaction cost analysis
 TDQN = See: Trading Deep Q-Network
 ---------------------------------------------------------------------------------------------------
 Technical analysis = The study of historical price and volume data to identify patterns and trends that can inform trading decisions.
+---------------------------------------------------------------------------------------------------
+Texas Hold 'em = A popular variant of poker where players are dealt two private cards and use five community cards to make the best possible five-card hand. If your trading strategies are very succesful, you might say "taxes, hold 'em."
 ---------------------------------------------------------------------------------------------------
 Throttle = A mechanism used to limit the rate of order submissions or executions in a trading system to prevent excessive trading activity and manage risk.
 ---------------------------------------------------------------------------------------------------
