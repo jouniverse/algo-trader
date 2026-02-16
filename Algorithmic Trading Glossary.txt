@@ -80,6 +80,8 @@ Average true range (ATR) = A technical analysis indicator that measures market v
 ---------------------------------------------------------------------------------------------------
 Backtesting = The process of testing a trading strategy or model using historical data to evaluate its performance before applying it in real-time trading.
 ---------------------------------------------------------------------------------------------------
+Baron Munchhausen = A fictional character who lifted himself out of a swamp by his own hair, or in other words pulled himself up by his own bootsraps. See: Bootstrapping.
+---------------------------------------------------------------------------------------------------
 Base rate = The benchmark interest rate set by a central bank, which influences borrowing costs and overall economic activity.
 ---------------------------------------------------------------------------------------------------
 Basel I = The first set of international banking regulations established by the Basel Committee on Banking Supervision in 1988, aimed at ensuring that financial institutions maintain adequate capital to cover their risks.
@@ -1034,7 +1036,7 @@ TDQN = See: Trading Deep Q-Network
 ---------------------------------------------------------------------------------------------------
 Technical analysis = The study of historical price and volume data to identify patterns and trends that can inform trading decisions.
 ---------------------------------------------------------------------------------------------------
-Texas Hold 'em = A popular variant of poker where players are dealt two private cards and use five community cards to make the best possible five-card hand. If your trading strategies are very succesful, you might say "taxes, hold 'em."
+Texas Hold 'em = A popular variant of poker where players are dealt two private cards and use five community cards to make the best possible five-card hand. Texas Hold 'em is often considered a game of skill, rather than a game of pure chance, as many behavioural tells and other factors have a large role to play in the game. If your trading strategies are very succesful, you might say "taxes, hold 'em."
 ---------------------------------------------------------------------------------------------------
 Throttle = A mechanism used to limit the rate of order submissions or executions in a trading system to prevent excessive trading activity and manage risk.
 ---------------------------------------------------------------------------------------------------
