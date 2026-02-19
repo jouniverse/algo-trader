@@ -704,6 +704,8 @@ Normality of residuals = A statistical assumption that the residuals (errors) of
 ---------------------------------------------------------------------------------------------------
 Normalization = The process of adjusting values measured on different scales to a common scale, often used in data preprocessing to improve the performance of machine learning algorithms.
 ---------------------------------------------------------------------------------------------------
+Nyquist-Shannon sampling theorem = A fundamental principle in signal processing that states that a continuous signal can be completely represented by its samples and fully reconstructed if it is sampled at a rate greater than twice its highest frequency component.
+---------------------------------------------------------------------------------------------------
 Obligation = A legal or financial commitment to perform a specific action, such as repaying a debt or fulfilling a contract.
 ---------------------------------------------------------------------------------------------------
 Offsetting = The practice of entering into a trade that counteracts an existing position, effectively closing it out and realizing any gains or losses.
@@ -1057,6 +1059,8 @@ Time period bias = A type of bias that occurs when a trading strategy or model i
 Time-series database = A database optimized for storing and querying time-stamped or time-series data, commonly used in financial applications for tracking market data over time.
 ---------------------------------------------------------------------------------------------------
 Time value of money = The concept that money available today is worth more than the same amount in the future due to its potential earning capacity.
+---------------------------------------------------------------------------------------------------
+Token = A digital representation of a unit of value or asset, often used in the context of blockchain and cryptocurrency to represent ownership or access rights.
 ---------------------------------------------------------------------------------------------------
 Total return = The overall percentage gain or loss of a trading strategy over a specified period.
 ---------------------------------------------------------------------------------------------------
