@@ -358,6 +358,8 @@ ESMA = European Securities and Markets Authority, an independent EU authority th
 ---------------------------------------------------------------------------------------------------
 ETF = Exchange-Traded Fund, a type of investment fund that is traded on stock exchanges, similar to stocks, and typically holds a diversified portfolio of assets.
 ---------------------------------------------------------------------------------------------------
+ETF rebalancing = The process of adjusting the holdings of an exchange-traded fund (ETF) to maintain its target asset allocation, often done periodically to reflect changes in the underlying index or market conditions.
+---------------------------------------------------------------------------------------------------
 Eurodollar = A U.S. dollar-denominated deposit held in banks outside the United States, often used in international finance and trading.
 ---------------------------------------------------------------------------------------------------
 Event probability = The likelihood of a specific event occurring, often used in risk management and trading strategies to assess potential outcomes.
@@ -429,6 +431,8 @@ Forward‑backward stochastic differential equations (FBSDE) = A class of mathem
 Fourier analysis = A mathematical technique used to decompose a function or signal into its constituent frequencies, often applied in financial time series analysis to identify cyclical patterns.
 ---------------------------------------------------------------------------------------------------
 FRED = Federal Reserve Economic Data, a comprehensive database maintained by the Federal Reserve Bank of St. Louis that provides access to a wide range of economic and financial data.
+---------------------------------------------------------------------------------------------------
+Front running trades = The unethical practice of a broker executing orders on a security for its own account while taking advantage of advance knowledge of pending orders from its customers.
 ---------------------------------------------------------------------------------------------------
 Fund = A pooled investment vehicle that collects money from multiple investors to invest in a diversified portfolio of assets.
 ---------------------------------------------------------------------------------------------------
@@ -1060,6 +1064,8 @@ Time-series database = A database optimized for storing and querying time-stampe
 ---------------------------------------------------------------------------------------------------
 Time value of money = The concept that money available today is worth more than the same amount in the future due to its potential earning capacity.
 ---------------------------------------------------------------------------------------------------
+Tippee trading = The act of trading based on material, non-public information received from an insider (tippee) who has a fiduciary duty to the company or its shareholders, which is illegal and can lead to severe penalties.
+---------------------------------------------------------------------------------------------------
 Token = A digital representation of a unit of value or asset, often used in the context of blockchain and cryptocurrency to represent ownership or access rights.
 ---------------------------------------------------------------------------------------------------
 Total return = The overall percentage gain or loss of a trading strategy over a specified period.
@@ -1067,6 +1073,8 @@ Total return = The overall percentage gain or loss of a trading strategy over a 
 Toxic liquidity = Liquidity that is associated with high levels of adverse selection risk, often provided by traders who possess superior information and can exploit less informed market participants.
 ---------------------------------------------------------------------------------------------------
 Trade = The act of buying or selling a financial instrument in the market.
+---------------------------------------------------------------------------------------------------
+Trading ahead = The practice of executing a trade based on non-public information about an upcoming order, often considered a form of market manipulation and illegal in many jurisdictions.
 ---------------------------------------------------------------------------------------------------
 Trading day = A standard business day during which financial markets are open for trading activities.
 ---------------------------------------------------------------------------------------------------
