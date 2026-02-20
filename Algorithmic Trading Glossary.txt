@@ -312,6 +312,8 @@ Dotcom bubble = A period of excessive speculation in internet-related companies 
 ---------------------------------------------------------------------------------------------------
 Double EMA indicator = An indicator that uses two Exponential Moving Averages (EMAs) to smooth price data and identify trends more effectively than a single EMA.
 ---------------------------------------------------------------------------------------------------
+Dovish = A monetary policy stance characterized by a focus on stimulating economic growth, often through lower interest rates, which can lead to increased borrowing and spending.
+---------------------------------------------------------------------------------------------------
 Dow Jones Industrial Average = A stock market index that measures the stock performance of 30 large, publicly-owned companies listed on stock exchanges in the United States.
 ---------------------------------------------------------------------------------------------------
 "Dow Theory" = A financial theory that suggests that the stock market moves in predictable trends and that these trends can be identified through the analysis of market indices, particularly the Dow Jones Industrial Average and the Dow Jones Transportation Average.
