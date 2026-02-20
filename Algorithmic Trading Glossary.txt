@@ -166,6 +166,8 @@ CAGR (Compound Annual Growth Rate) = A measure of an investment's annual growth 
 ---------------------------------------------------------------------------------------------------
 Calendar day = A standard day in the calendar, including weekends and holidays, as opposed to a trading day which only includes days when markets are open.
 ---------------------------------------------------------------------------------------------------
+Call option = A financial contract that gives the holder the right, but not the obligation, to buy a specified quantity of an underlying asset at a predetermined price (strike price) within a specified time period.
+---------------------------------------------------------------------------------------------------
 Calmar ratio = A risk-adjusted performance metric that compares the annualized return of an investment to its maximum drawdown.
 ---------------------------------------------------------------------------------------------------
 Cancel = The action of withdrawing or nullifying a previously placed order in the market before it is executed.
@@ -638,6 +640,8 @@ Mean‑field game = A mathematical framework used to analyze strategic decision-
 ---------------------------------------------------------------------------------------------------
 Mean reversion strategy = A trading strategy that assumes that asset prices will revert to their historical average over time, leading to buy signals when prices are low and sell signals when prices are high.
 ---------------------------------------------------------------------------------------------------
+Meme stock = A stock that gains popularity and experiences a significant increase in price due to social media hype and viral trends, often without strong fundamental support.
+---------------------------------------------------------------------------------------------------
 Mid price = The average of the best bid and best ask prices for a security, often used as a reference point for trade execution.
 ---------------------------------------------------------------------------------------------------
 MiFID II = The Markets in Financial Instruments Directive II, a regulatory framework implemented by the European Union to increase transparency and investor protection in financial markets.
@@ -821,6 +825,8 @@ Profit and Loss = A financial statement that summarizes the revenues, costs, and
 Profit factor = The ratio of gross profits to gross losses, indicating the profitability of a trading strategy.
 ---------------------------------------------------------------------------------------------------
 Pulldown/Pullback Strategy = A trading strategy that aims to capitalize on temporary price declines (pullbacks) within an overall upward trend, providing opportunities to enter long positions at more favorable prices.
+---------------------------------------------------------------------------------------------------
+Put option = A financial derivative that gives the holder the right, but not the obligation, to sell an underlying asset at a specified price within a specified time period.
 ---------------------------------------------------------------------------------------------------
 p-value = A statistical measure that helps determine the significance of results obtained from hypothesis testing, indicating the probability of observing the data if the null hypothesis is true.
 ---------------------------------------------------------------------------------------------------
